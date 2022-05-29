@@ -4,11 +4,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const cors=require('cors');
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
 var app = express();
+
+var productsRoute = require('./routes/products');
+var usersRoute = require('./routes/users');
+
+app.use('/api/products',productsRoute);
+app.use('/api/users',usersRoute);
+
+
 app.use(cors({
   origin :"*",
   methods:['GET','POST','PATCH','DELETE','PUT'],
@@ -42,6 +46,7 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+  console.log("server started");
 });
 
 module.exports = app;
