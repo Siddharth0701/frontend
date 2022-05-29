@@ -1,12 +1,16 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+export interface ProductModelServer {
+  id: Number;
+  name: String;
+  category: String;
+  description: String;
+  image: String;
+  price: Number;
+  quantity: Number;
+  images: String;
+}
 
 
-
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
-})
-export class ProductModule { }
+export interface serverResponse  {
+  count: number;
+  products: ProductModelServer[]
+};
