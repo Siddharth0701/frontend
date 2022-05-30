@@ -4,7 +4,7 @@ import { ProductModelServer } from "../product/product.module";
 export interface CartModelServer {
   total: Number;
   data: [{
-    product: ProductModelServer,
+    product : ProductModelServer,
     numInCart: Number
   }];
 }
