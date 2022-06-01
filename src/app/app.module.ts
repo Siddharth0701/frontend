@@ -14,6 +14,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ProductComponent } from './components/product/product.component';
 import { SinghComponent } from './components/singh/singh.component';
 import { AbcComponent } from './components/abc/abc.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { AbcComponent } from './components/abc/abc.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
