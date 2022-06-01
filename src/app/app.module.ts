@@ -15,6 +15,7 @@ import { ProductComponent } from './components/product/product.component';
 import { SinghComponent } from './components/singh/singh.component';
 import { AbcComponent } from './components/abc/abc.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxSpinnerModule
 
   ],
   providers: [],
